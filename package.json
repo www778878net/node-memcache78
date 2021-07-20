@@ -1,6 +1,6 @@
 {
   "name": "node-memcache78",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "node-memcache78",
   "main": "dist/index.js",
   "types": "src/index.ts",
