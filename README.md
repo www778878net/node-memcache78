@@ -45,12 +45,29 @@ npm i node-memcache78
 >## 使用 use   for testing, you can see ./test/test.js.
 >>### 初始化 init
 ```
-import Mysql from "node-memcache78";
+import MemCache78 from "node-memcache78";
 let  config={host:"127.0.0.1",port:11211}
 let memcached78 = new MemCache78(config);
 ```
  
+>>### set get
+```
+let result =await memcached78.set("testitem", 1, 60);
+result=await memcached78.get("testitem")
+```
 
+>>### incr del
+```
+let result =await memcached78.incr("testitem");
+result=await memcached78.del("testitem")
+```
+
+>>### set get json 
+```
+let result =await memcached78.tbset("testitemset", {test:1,test2:2},30)
+result=await memcached78.tbget("testitemset" )
+let test2=result["test2"]
+```
 
 ***
 >## 框架简要说明
